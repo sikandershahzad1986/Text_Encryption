@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt / Decrypt Application</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1>Encrypt / Decrypt Application</h1>
+        <form action="/decrypt" method="post">
+            <label for="textbox">Enter Text</label>
+            <input type="text" id="textbox" name="word" class="textbox">
+            <button type="submit" class="submit-button">Submit</button>
+        </form><br/>
+             
+ <% if (locals.enc) { %>
+  
+        <div class="display">Encrypted Version:<br/><textarea cols="60" rows="6" readonly><%= enc %></textarea> </div>  
+
+        <% } else { %>
+         
+            <div class="display">Encrypted Version:<br/></div> 
+
+<% } %>
+   
+       
+    </div>
+
+
+</body>
+</html>
